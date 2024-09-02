@@ -269,9 +269,10 @@ lua_defs.luajit = add_defs(make_min_def("luajit"), {
 })
 lua_defs.ngx_lua = add_defs(lua_defs.luajit, ngx)
 lua_defs.max = add_defs(lua_defs.lua51c, lua_defs.lua52c, lua_defs.lua53c, lua_defs.lua54c, lua_defs.luajit)
-lua_defs.redis5 = add_defs(lua_defs.lua51, redis5)
-lua_defs.redis6 = add_defs(lua_defs.redis5, redis6)
-lua_defs.redis7 = add_defs(lua_defs.redis6, redis7)
+lua_defs.redis5 = add_defs(lua_defs.lua51, redis5, redis_scripts)
+lua_defs.redis6 = add_defs(lua_defs.redis5, redis6, redis_scripts)
+lua_defs.redis7 = add_defs(lua_defs.redis6, redis7, redis_scripts)
+lua_defs.redis7_functions = add_defs(lua_defs.redis6, redis7, redis_functions)
 lua_defs.redis_scripts = redis_scripts
 lua_defs.redis_functions = redis_functions
 
